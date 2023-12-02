@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "Blooket Cheat Menu",
+  "version": "1.0",
+  "description": "An extension that provides a cheat menu for Blooket game.",
+  "icons": {},
+  "permissions": ["storage", "activeTab"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.blooket.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    },
+    "default_popup": "popup.html"
+  }
+}
